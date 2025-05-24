@@ -1,5 +1,5 @@
 # Level 1: Client-only Authentication
-
+- [Access Source Code of this project](../source-code/level1-auth/) and run the project locally for now.
 - Summary:
   - We'll use `localStorage` for data persistence combined with React Context for state management
   - An `AuthContext` will provide global access to authentication state and methods

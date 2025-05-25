@@ -1,9 +1,13 @@
 # Level 1: Client-only Authentication
-- [Access Source Code of this project](../source-code/level1-auth/) and run the project locally for now.
+- [Access Source Code of this project](../source-code/level1-auth/) and run the project locally.
+- [Test the Project Live](https://nextjs-level1-auth.vercel.app/)
 - Summary:
   - We'll use `localStorage` for data persistence combined with React Context for state management
   - An `AuthContext` will provide global access to authentication state and methods
   - There's *no real signup or backend.* We'll fake login with hardcoded credentials.
+
+- Navigation
+  - [Go to Main Doc](../README.md)
 
 ## Step-by-Step Plan
 

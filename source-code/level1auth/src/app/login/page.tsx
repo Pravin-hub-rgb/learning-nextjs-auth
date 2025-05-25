@@ -1,8 +1,6 @@
 'use client'
-
 import { useRouter } from 'next/navigation'
-import { use, useState } from 'react'
-import { login } from '@/lib/auth-local'
+import { useState } from 'react'
 import { useAuth } from '@/context/AuthContext'
 
 export default function LoginPage() {
@@ -15,7 +13,6 @@ export default function LoginPage() {
   const handleLogin = (e: React.FormEvent) => {
     e.preventDefault()
     const success = login(email, password)
-
     if (success) {
       setError('')
       setTimeout(() => {
@@ -29,7 +26,6 @@ export default function LoginPage() {
   return (
     <div className="max-w-sm mx-auto mt-16">
       <h2 className="text-2xl font-bold mb-4">Login</h2>
-
       <form onSubmit={handleLogin} className="space-y-4">
         <div>
           <label>Email:</label>
@@ -40,7 +36,6 @@ export default function LoginPage() {
             onChange={(e) => setEmail(e.target.value)}
           />
         </div>
-
         <div>
           <label>Password:</label>
           <input
@@ -50,9 +45,7 @@ export default function LoginPage() {
             onChange={(e) => setPassword(e.target.value)}
           />
         </div>
-
         {error && <p className="text-red-600">{error}</p>}
-
         <button
           type="submit"
           className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700"

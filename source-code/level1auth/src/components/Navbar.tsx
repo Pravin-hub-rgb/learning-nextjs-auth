@@ -1,6 +1,4 @@
 'use client'
-import React, { useState, useEffect } from 'react'
-import { isAuthenticated, logout } from '@/lib/auth-local'
 import { useRouter } from 'next/navigation'
 import { useAuth } from '@/context/AuthContext'
 

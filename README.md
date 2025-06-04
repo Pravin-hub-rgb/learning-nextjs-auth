@@ -3,7 +3,7 @@
 - We are going to define our **base project** once, then use the *same project idea* to implement all auth methods one by one. That way, we'll truly understand the differences and internal workings of authentication.
 - There are **5 methods** to implement Authentication (1 being simplest and 5 being the most advanced):
   1. [Client-only Authentication (Beginner - Simplest)](./Documentation/level%201%20client%20side%20only.md), [Live Web App](https://nextjs-level1-auth.vercel.app/)
-  2. Supabase Auth (In Progress)
+  2. [Supabase Auth](./Documentation/level%202%20Supabase%20Auth.md), [Live Web App](https://nextjs-level2-auth.vercel.app/)
   3. NextAuth.js
   4. Autho / Clerk / firebase Auth / Magic Links
   5. Custom Authentication System (Advanced)

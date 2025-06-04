@@ -1,10 +1,44 @@
-# Level 1: Client-only Authentication
+# Level 2: Supabase Auth
 - [Access Source Code of this project](../source-code/level2auth/) and run the project locally.
 - [Test the Project Live](https://nextjs-level2-auth.vercel.app/)
 - Summary:
-  - We'll use `localStorage` for data persistence combined with React Context for state management
-  - An `AuthContext` will provide global access to authentication state and methods
-  - There's *no real signup or backend.* We'll fake login with hardcoded credentials.
+  - We'll use Supabase Auth for real authentication with email/password.
+
+- Supabase will handle:
+
+    - User signup, login, and session management
+
+    - Automatically storing the session in localStorage/cookies
+
+- A custom AuthContext:
+
+    - Wraps the entire app to track authentication state
+
+    - Provides global access to:
+
+        - signUp(email, password)
+
+        - signIn(email, password)
+
+        - logout()
+
+        - user, loggedIn, and loading states
+
+- Auth state updates in real-time using Supabase’s onAuthStateChange listener.
+
+- Protected routes (like /secret) are implemented by:
+
+    - Checking auth status via context
+
+    - Redirecting to /login if unauthenticated
+
+- UI behavior:
+
+    - Navbar shows Login or Logout depending on auth state
+
+    - Displays the user’s email if logged in
+
+- Session is persisted automatically by Supabase, and restored on page refresh.
 
 - Navigation
   - [Go to Main Doc](../README.md)

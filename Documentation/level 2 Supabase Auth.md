@@ -746,3 +746,23 @@ This phase will connect your app to a real Supabase project and get the Supabase
       )
     }
     ```
+
+## Set Hosted Redirect URL in Supabase
+1. Go to Supabase Dashboard
+  - Open [https://supabase.com](https://supabase.com)
+  - Select your project
+2. Navigate to Authentication Settings
+  - Go to `Authentication` -> `URL Configuration`
+3. Update Site URL
+  - You'll see a field called "Site URL".
+  - Replace the `http://localhost:3000` with you deployed app's URL.
+
+    Example:
+    ```
+    https://your-app.vercel.app
+    ```
+4. Save Changes
+
+### What This Does
+
+This updates the base URL used for magic links and OAuth redirects. So any future magic link emails will now redirect to your live app instead of your local dev environment.
